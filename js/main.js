@@ -20,8 +20,7 @@ window.addEventListener('mousemove',function (ev) {
     mouseY = ev.y
 });
 window.addEventListener('resize',function(){
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    resizeCanvas(canvas);
     init();
 });
 function Circle(x, y, dx,dy, minSize){
@@ -64,6 +63,7 @@ function Circle(x, y, dx,dy, minSize){
 var circleArray = [];
 function init(){
 
+    circleArray = [];
     for(var i = 0; i< 1000 ; i++){
         var x = Math.random()* window.innerWidth;
         var y = Math.random()* window.innerHeight;
@@ -86,3 +86,7 @@ function animate(){
 }
 init();
 animate();
+function resizeCanvas(cnvs){
+    cnvs.width = innerWidth;
+    cnvs.height = innerHeight
+}
