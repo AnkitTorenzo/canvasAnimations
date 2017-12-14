@@ -84,8 +84,14 @@ function animate(){
     }
 
 }
-init();
-animate();
+
+//init your canvas
+init()
+document.getElementById('start').onclick = function(){
+    //this function will start the animation in canvas
+    animate();
+};
+
 function resizeCanvas(cnvs){
     cnvs.width = innerWidth;
     cnvs.height = innerHeight
