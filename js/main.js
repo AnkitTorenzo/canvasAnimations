@@ -86,11 +86,8 @@ function animate(){
 }
 
 //init your canvas
-init()
-document.getElementById('start').onclick = function(){
-    //this function will start the animation in canvas
-    animate();
-};
+init();
+animate();
 
 function resizeCanvas(cnvs){
     cnvs.width = innerWidth;
