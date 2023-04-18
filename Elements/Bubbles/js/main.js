@@ -3,11 +3,11 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 var colorStyle = [
-    '#2C3E50',
+    '#92c7fc',
     '#FC4349',
     '#FF4600',
-    '#6DBCDB',
-    '#F2C777'
+    '#00b7ff',
+    '#f5bf5b'
 ];
 
 var c = canvas.getContext('2d');
@@ -76,7 +76,9 @@ function init(){
 
 function animate(){
 
+    c.fillStyle = "#000000";
     c.clearRect(0,0,window.innerWidth,window.innerHeight);
+    c.fill();
     requestAnimationFrame(animate);
     for(var i = 0; i < circleArray.length ; i++){
         var circle = circleArray[i];
