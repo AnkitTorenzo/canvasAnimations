@@ -78,6 +78,8 @@ function animate(){
 
     c.fillStyle = "#000000";
     c.clearRect(0,0,window.innerWidth,window.innerHeight);
+    c.beginPath();
+    c.rect(0,0,window.innerWidth,window.innerHeight);
     c.fill();
     requestAnimationFrame(animate);
     for(var i = 0; i < circleArray.length ; i++){
